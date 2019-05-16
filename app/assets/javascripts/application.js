@@ -13,4 +13,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
+//= require lib/jquery
+//= require lib/bootstrap.min
+//= require lib/owl.carousel.min
+//= require lib/webslidemenu
+//= require lib/main
