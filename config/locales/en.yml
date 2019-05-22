@@ -1,33 +1,47 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  placeholder_search: "Search products, Category ..."
+  static_pages:
+    home:
+      tiki_deal: "Tiki Deal"
+      recent_category: "RECENTLY SEARCH"
+      read_more: "Read more"
+      trending_search: "TRENDING SEARCH"
+      daily_discover: "DAILY DISCOVER"
+  layouts:
+    header:
+      search: "search"
+      track: "Track"
+      order: "Orders"
+      notification: "notifications"
+      my: "My"
+      account: "Account"
+      notification_account: "notifications"
+      cart: "Cart"
+      category: "Category"
+      signin: "Signin"
+      signup: "Signup"
+      signin_facebook: "Signin with Facebook"
+      signin_google: "Signin with Google"
+      signin_zalo: "Signin with Zalo"
+    popup:
+      signin: "Signin"
+      signup: "Signup"
+      comment1: "Signin to track orders,"
+      comment2: "Wishlist, and"
+      comment3: "Receive promotion"
+      email_popup: "Email/Phone"
+      password_popup: "Password"
+      placeholder1: "Insert email or phone"
+      placeholder2: "Insert password"
+      forgot_password: "Forgot password? Click"
+      here: "here"
+      signin_facebook: "Signin with Facebook"
+      signin_google: "Signin with Google"
+      signin_zalo: "Signin with Zalo"
+      create_acc: "Create account"
+      name: "Name"
+      phone: "Phone"
+      name_holder: "Insert name"
+      phone_holder: "Insert phone"
+      email_holder: "Insert email"
+      password_holder: "Insert password"

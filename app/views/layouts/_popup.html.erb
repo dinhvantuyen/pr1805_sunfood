@@ -1,0 +1,93 @@
+<div class="popup login-form-modal" data-popup="popup-1">
+  <div class="popup-inner">
+    <div class="modal-body">
+      <div class="content-left">
+        <h2><%= t(".signin") %></h2>
+        <p><%= t(".comment1") %> <br><%= t(".comment2") %><br> <%= t(".comment3") %></p>
+        <!-- <img src="assets/img/login.png"> -->
+      </div>
+      <div class="content-right">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true"><%= t(".signin") %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="false"><%= t(".create_acc") %>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form action="#" class="content-popup-form">
+              <div class="login_popup_email">
+                <label class="control-label"><%= t(".email_popup") %></label>
+                <input type="search" class="form-control login" placeholder="<%= t(".placeholder1") %>">
+              </div>
+              <div class="password_popup">
+                <label class="control-label"><%= t(".password_popup") %></label>
+                <input type="search" class="form-control login" placeholder="<%= t(".placeholder2") %>">
+              </div>
+            </form>
+            <div class="form-group">
+              <p class="reset"><%= t(".forgot_password") %>
+                <a data-toggle="modal" data-target="#reset-password-form" href="#"><%= t(".here") %></a>
+              </p>
+            </div>
+            <div class="form-group social">
+              <a class="btn" href="#"><%= t(".signin") %></a>
+              <a href="#" class="facebook-login">
+                <span class="facebook-icon">
+                  <i class="tikicon icon-facebook-white"></i>
+                </span>
+                <%= t(".signin_facebook") %>
+              </a>
+              <a href="#" class="google-login">
+                <span class="google-icon">
+                  <i class="tikicon icon-google-white"></i>
+                </span>
+                <%= t(".signin_google") %>
+              </a>
+              <a href="#" class="zalo-login">
+                <span class="zalo-icon">
+                  <i class="tikicon icon-zalo-white"></i>
+                </span>
+                <%= t(".signin_zalo") %>
+              </a>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="profile-tab">
+            <form action="#" class="content-popup-form">
+              <div class="sign-in-popup">
+                <label class="control-label"><%= t(".name") %></label>
+                <input type="search" class="form-control login" placeholder="<%= t(".name_holder") %>">
+                <label class="control-label"><%= t(".phone") %></label>
+                <input type="search" class="form-control login" placeholder="<%= t(".phone_holder") %>">
+                <label class="control-label"><%= t(".email") %></label>
+                <input type="search" class="form-control login" placeholder="<%= t(".email_holder") %>">
+                <label class="control-label"><%= t(".password") %></label>
+                <input type="search" class="form-control login" placeholder="<%= t(".password_holder") %>">
+              </div>
+              <div class="sign-in-ntn social">
+                <a href="#"><%= t(".create_acc") %></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+  </div>
+</div>
+<!------------- pop up address  ---------------->
+<div class="popup login-form-modal" data-popup="popup-2">
+  <div class="popup-inner">
+    <div class="modal-body">
+      <div class="content-left">
+        <h2><%= t(".signin") %></h2>
+        <p><%= t(".comment1") %> <br><%= t(".comment2") %><br> <%= t(".comment3") %></p>
+        <img src="assets/img/login.png">
+      </div>
+    </div>
+    <a class="popup-close" data-popup-close="popup-2" href="#">x</a>
+  </div>
+</div>
