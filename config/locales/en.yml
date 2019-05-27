@@ -45,3 +45,35 @@ en:
       phone_holder: "Insert phone"
       email_holder: "Insert email"
       password_holder: "Insert password"
+  devise:
+    sessions:
+      new:
+        login_h2: "Log in"
+        email: "Email"
+        password: "Password"
+        remember: "Remember me"
+        login: "Log in"
+    shared:
+      links:
+        signup: "Sign up"
+        forgot_password: "Forgot your password?"
+        login: "Log in"
+    registrations:
+      new:
+        signup_h2: "Sign up"
+        password: "Password"
+        pass_confirm: "Password confirmation"
+        signup: "Sign up"
+        minimum: "characters minimum"
+      edit:
+        edit_h2: "Edit User"
+        password: "Password"
+        comment: "leave blank if you don't want to change it"
+        minimum: "characters minimum"
+        pass_confirm: "Password confirmation"
+        current_pass: "Current password"
+        comment2: "we need your current password to confirm your changes"
+        update: "Update"
+        cancel: "Cancel my account"
+        unhappy: "Unhappy?"
+        back: "Back"
