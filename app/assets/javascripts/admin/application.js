@@ -16,3 +16,10 @@
 //= require turbolinks
 //= require admin-lte
 //= require ./lib/custom
+//= require tinymce
+
+$(document).on('turbolinks:load', function(){
+  tinyMCE.init({
+    selector: "textarea.tinymce"
+  });
+})

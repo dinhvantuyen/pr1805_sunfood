@@ -1,0 +1,114 @@
+<section class="content-header">
+  <h1>
+    Tất cả sản phẩm
+    <small>
+      <%= link_to "Thêm mới sản phẩm", new_admin_product_path, class: "btn-new-post" %>
+    </small>
+  </h1>
+  <ul class="subsubsub">
+    <li class="all">
+      <a href="#" class="curent">Tất cả
+        <span class="count"><%= @count %></span>
+      </a> |
+    </li>
+    <li class="publish">
+      <a href="#">Đã xuất bản
+        <span class="count"><%= @count %></span>
+      </a> |
+    </li>
+    <li class="yoast_cornerstone">
+      <a href="#">Nội dung quan trọng</a> (0)
+    </li>
+  </ul>
+  <p class="search-box">
+    <input type="search" id="post-search-input" name="s" value="">
+    <input type="submit" id="search-submit" class="button" value="Tìm các bài viết">
+  </p>
+  <div class="tablenav top">
+    <div class="alignleft actions bulkactions">
+      <select name="action" id="bulk-action-selector-top">
+        <option value="-1">Tác vụ</option>
+        <option value="edit" class="hide-ì-no-js">Chỉnh sửa</option>
+        <option value="trash">Bỏ vào thùng rác</option>
+      </select>
+      <input type="submit" id="doaction" class="button action" value="Áp dụng">
+    </div>
+    <div class="alignleft actions">
+      <select name="m" id="filter-by-date">
+        <option selected="selected" value="0">Tất cả các ngày</option>
+        <option value="201905">Tháng Năm 2019</option>
+        <option value="201904">Tháng Tư 2019</option>
+      </select>
+      <select name="cat" id="cat" class="postform">
+        <option value="0">Tất cả chuyên mục</option>
+        <option class="level-0" value="4">Brand Sharing</option>
+        <option class="level-0" value="1">Chưa được phân loại</option>
+        <option class="level-0" value="3">Clients</option>
+        <option class="level-0" value="8">Services play</option>
+      </select>
+      <input type="submit" name="filter_action" id="post-query-submit" class="button" value="Lọc">
+    </div>
+    <br class="clear">
+  </div>
+</section>
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <!-- /.box-header -->
+        <div class="box-body">
+          <table id="all-product" class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Hình ảnh</th>
+                <th>Tiêu đề</th>
+                <th>Tác giả</th>
+                <th>Chuyên mục</th>
+                <th>Trạng thái</th>
+                <th>Thời gian</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @product.each do |product| %>
+                <tr>
+                  <td><%= image_tag product.image.url || "product/default.jpg", class: "image_product_admin" %></td>
+                  <td>
+                    <strong><%= product.name %></strong>
+                    <div class="row-actions">
+                      <span class="edit">
+                      <%= link_to "Chỉnh sửa", edit_admin_product_path(product) %> |
+                      </span>
+                      <span class="trash">
+                        <a href="#" class="submitdelete">Xóa tạm</a> |
+                      </span>
+                      <span class="view">
+                        <a href="#" rel="bookmark" aria-label="Xem “Bài viết client 5”">Xem</a>
+                      </span>
+                    </div>
+                  </td>
+                  <td>admin
+                  </td>
+                  <td>
+                    <% product.categories.each do |category| %>
+                      <%= "#{category.name}, " %>
+                    <% end %>
+                  </td>
+                  <td>
+                    <span class="status">
+                      <%= product.status %>
+                    </span>
+                  </td>
+                  <td><%= product.created_at.to_date %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</section>
