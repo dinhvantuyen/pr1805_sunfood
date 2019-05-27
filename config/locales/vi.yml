@@ -45,3 +45,35 @@ vi:
       phone_holder: "Số điện thoại"
       email_holder: "Nhập email"
       password_holder: "Nhập password"
+  devise:
+    sessions:
+      new:
+        login_h2: "Đăng nhập"
+        email: "Email"
+        password: "Mật khẩu"
+        remember: "Ghi nhớ đăng nhập"
+        login: "Đăng nhập"
+    shared:
+      links:
+        signup: "Đăng ký"
+        forgot_password: "Quên mật khẩu của bạn?"
+        login: "Đăng nhập"
+    registrations:
+      new:
+        signup_h2: "Đăng ký"
+        password: "Mật khẩu"
+        pass_confirm: "Xác nhận mật khẩu"
+        signup: "Đăng ký"
+        minimum: "ký tự tối thiểu"
+      edit:
+        edit_h2: "Chỉnh Sửa Thông Tin"
+        password: "Mật khẩu"
+        comment: "Để trống nếu bạn không muốn thay đổi"
+        minimum: "ký tự tối thiểu"
+        pass_confirm: "Xác nhận mật khẩu"
+        current_pass: "Mật khẩu hiện tại"
+        comment2: "Chúng tôi cần mật khẩu hiện tại để xác nhận thay đổi của bạn"
+        update: "Cập nhật"
+        cancel: "Hủy tài khoản"
+        unhappy: "Không hài lòng?"
+        back: "Quay lại"
