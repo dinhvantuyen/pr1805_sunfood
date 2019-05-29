@@ -45,22 +45,32 @@
                   <i class="tikicon icon-user"></i>
                   <span><%= t(".account") %> <br> <small><%= t(".notification_account") %></small></span>
                 </div>
-                <div class="dropdown-content social">
-                  <a href="#" class="btn" data-popup-open="popup-1" ><%= t(".signin") %></a>
-                  <a href="#" class="btn" data-popup-open="popup-1"><%= t(".signup") %></a>
-                  <%= link_to user_facebook_omniauth_authorize_path, class: "facebook-login" do %>
-                    <span class="facebook-icon">
-                      <i class="tikicon icon-facebook-white"></i>
-                    </span>
-                    <%= t(".signin_facebook") %>
-                  <% end %>
-                  <%= link_to user_google_oauth2_omniauth_authorize_path, class: "google-login" do %>
-                    <span class="google-icon">
-                      <i class="tikicon icon-google-white"></i>
-                    </span>
-                    <%= t(".signin_google") %>
-                  <% end %>
-                </div>
+                <% if user_signed_in? %>
+                  <div class="dropdown-content">
+                    <ul>
+                      <li>
+                        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+                      </li>
+                    </ul>
+                  </div>
+                <% else %>
+                  <div class="dropdown-content social">
+                    <a href="#" class="btn" data-popup-open="popup-1" ><%= t(".signin") %></a>
+                    <a href="#" class="btn" data-popup-open="popup-1"><%= t(".signup") %></a>
+                    <%= link_to user_facebook_omniauth_authorize_path, class: "facebook-login" do %>
+                      <span class="facebook-icon">
+                        <i class="tikicon icon-facebook-white"></i>
+                      </span>
+                      <%= t(".signin_facebook") %>
+                    <% end %>
+                    <%= link_to user_google_oauth2_omniauth_authorize_path, class: "google-login" do %>
+                      <span class="google-icon">
+                        <i class="tikicon icon-google-white"></i>
+                      </span>
+                      <%= t(".signin_google") %>
+                    <% end %>
+                  </div>
+                <% end %>
               </div>
               <div class="index-cart">
                 <%= link_to carts_path do %>

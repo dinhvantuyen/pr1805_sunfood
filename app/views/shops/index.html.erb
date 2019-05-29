@@ -1,0 +1,46 @@
+<main id ="main" class="main-content">
+  <div class="flex-row container">
+    <div class="col-md-12">
+      <h2 class="center shop-old-title">
+        <%= t(".welcome") %>
+      </h2>
+      <div class="subtitle center">
+        <p><%= t(".description") %></p>
+      </div>
+      <div class="content">
+        <div class="button-cotent center clearfix">
+          <div class="button">
+            <%= link_to new_shops_product_path, class: "shop-button bg-blue" do %>
+              <i class="fa fa-gift" aria-hidden="true"></i>
+            <% end %>
+            <div class="sr"><%= t(".product_title") %></div>
+          </div>
+          <div class="button">
+            <a href="#" class="shop-button bg-oranges" target="_blank">
+              <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+            <div class="sr"><%= t(".category_title") %></div>
+          </div>
+          <div class="button">
+            <a href="#" class="shop-button bg-pink" target="_blank">
+              <i class="fa fa-first-order" aria-hidden="true"></i>
+            </a>
+            <div class="sr"><%= t(".oder") %></div>
+          </div>
+          <div class="button">
+            <a href="#" class="shop-button bg-blue-sky" target="_blank">
+              <i class="fa fa-pie-chart" aria-hidden="true"></i>
+            </a>
+            <div class="sr"><%= t(".statistical") %></div>
+          </div>
+          <div class="button">
+            <a href="#" class="shop-button bg-yellow" target="_blank">
+              <i class="fa fa-money" aria-hidden="true"></i>
+            </a>
+            <div class="sr"><%= t(".revenue") %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

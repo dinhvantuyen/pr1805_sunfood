@@ -156,3 +156,35 @@ vi:
       grand_total: "Thành tiền"
       vat_added: "Đã bao gồm VAT"
       checkout: "Tiến hành đặt hàng"
+  shops:
+    index:
+      welcome: "Chào mừng bạn đến với Sunshop - kênh người bán"
+      description: "Shopee - Kênh Người bán là công cụ quản lý shop, giúp bạn dễ
+       phân loại sản phẩm, theo dõi đơn hàng, chăm sóc khách hàng và đánh giá
+       hoạt động của shop.Là chủ shop, bạn vui lòng đọc kĩ và tuân thủ"
+      product_title: "Sản phẩm"
+      category_title: "Danh mục sản phẩm"
+      order: "Đơn hàng"
+      statistical: "Thống kê"
+      revenue: "Doanh thu"
+    products:
+      index:
+        all_product: "Tất cả sản phẩm"
+        stocking: "Còn hàng"
+        out_stock: "Hết hàng"
+        locked: "Đã bị khóa"
+        hidden: "Đã bị ẩn"
+        new_porduct: "Thêm mới một sản phẩm"
+      new:
+        product_name: "Tên sản phẩm"
+        category_product: "Danh mục sản phẩm"
+        product_description: "Mô tả sản phẩm"
+        product_price: "Gía bán"
+        promotional_price: "Gía khuyến mại"
+        status_product: "Trạng thái"
+        image: "Hình ảnh sản phẩm"
+        info: "Thông tin cơ bản"
+        info_sell: "Thông tin bán hàng"
+        management: "Quản lý truyền thông"
+        add_new: "Thêm mới"
+      show:

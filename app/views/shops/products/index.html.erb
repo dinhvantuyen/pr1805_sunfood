@@ -1,0 +1,50 @@
+<main id ="main" class="main-content">
+  <div class="shop-products-tab">
+    <div class="flex-row container">
+      <div class="col-md-12">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="true"><%= t(".all_product") %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="stocking-tab" data-toggle="tab" href="#stocking" role="tab" aria-controls="stocking" aria-selected="false"><%= t(".stocking") %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="out-stock-tab" data-toggle="tab" href="#out-stock" role="tab" aria-controls="out-stock" aria-selected="false"><%= t(".out_stock") %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="lock-tab" data-toggle="tab" href="#lock" role="tab" aria-controls="lock" aria-selected="false"><%= t(".locked") %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="hidden-tab" data-toggle="tab" href="#hidden" role="tab" aria-controls="hidden" aria-selected="false"><%= t(".hidden") %></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="flex-row container">
+  <div class="col-md-12">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+          <div class="product_list-header clearfix">
+            <div class="col-md-6 float-left">
+            <input class="form-control" type="text" placeholder="Search product" aria-label="Search">
+            </div>
+            <div class="col-md-6 float-left">
+              <%= link_to new_shops_product_path, class: "button--primary" do %>
+                <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                  <span><%= t(".new_porduct") %></span>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="stocking" role="tabpanel" aria-labelledby="stocking-tab">...</div>
+        <div class="tab-pane fade" id="out-stock" role="tabpanel" aria-labelledby="out-stock-tab">...</div>
+        <div class="tab-pane fade" id="lock" role="tabpanel" aria-labelledby="lock-tab">...
+        </div>
+        <div class="tab-pane fade" id="hidden" role="tabpanel" aria-labelledby="hidden-tab">...
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
