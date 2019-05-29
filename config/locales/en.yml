@@ -45,6 +45,8 @@ en:
       phone_holder: "Insert phone"
       email_holder: "Insert email"
       password_holder: "Insert password"
+      passconfirm: "Password confirmation"
+      passconfirm_holder: "Insert password confirmation"
   devise:
     sessions:
       new:

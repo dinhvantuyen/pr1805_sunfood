@@ -47,25 +47,19 @@
 								</div>
 								<div class="dropdown-content social">
 									<a href="#" class="btn" data-popup-open="popup-1" ><%= t(".signin") %></a>
-									<a href="#"><%= t(".signup") %></a>
-									<a href="#" class="facebook-login">
+									<a href="#" class="btn" data-popup-open="popup-1"><%= t(".signup") %></a>
+									<%= link_to user_facebook_omniauth_authorize_path, class: "facebook-login" do %>
 										<span class="facebook-icon">
 											<i class="tikicon icon-facebook-white"></i>
 										</span>
 										<%= t(".signin_facebook") %>
-									</a>
-									<a href="#" class="google-login">
+									<% end %>
+									<%= link_to user_google_oauth2_omniauth_authorize_path, class: "google-login" do %>
 										<span class="google-icon">
 											<i class="tikicon icon-google-white"></i>
 										</span>
 										<%= t(".signin_google") %>
-									</a>
-									<a href="#" class="zalo-login">
-										<span class="zalo-icon">
-											<i class="tikicon icon-zalo-white"></i>
-										</span>
-										<%= t(".signin_zalo") %>
-									</a>
+									<% end %>
 								</div>
 							</div>
 							<div class="index-cart">

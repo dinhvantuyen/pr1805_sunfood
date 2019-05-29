@@ -404,6 +404,31 @@ input[type="search"]{
   margin: 5px 12px;
   outline: none;
 }
+.social input[type=submit]{
+  color: rgb(74, 74, 74);
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+  width: 236px;
+  height: 41px;
+  line-height: 41px;
+  text-shadow: rgb(171, 171, 171) 0px 0px 1px;
+  background: rgb(253, 216, 53);
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  padding: 0px;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5px;
+}
 .dropdown-content a:hover{
   background-color: #ddd;
 }
@@ -1613,9 +1638,10 @@ Css popup
   font-size: 13px;
   color: #333;
   font-weight: 400;
-  width: 70px;
+  width: 150px;
 }
 .content-popup-form input{
+  margin-bottom: 15px;
   display: inline-block;
   width: 83%;
   padding-right: 42.5px;
@@ -1639,9 +1665,6 @@ Css popup
 #myTabContent #login .form-group.social a{
   margin: 5px 0px;
   width: 100%;
-}
-.sign-in-popup label.control-label{
-  margin-bottom: 15px;
 }
 .sign-in-ntn{
   width: 87%;
@@ -2654,4 +2677,10 @@ button.btn.btn-default.btn-coupon{
   border-radius: 0 3px 3px 0;
   font-weight: 500;
   margin: 0;
+}
+.btn-login {
+  margin-bottom: 0px;
+}
+.btn-signup {
+  width: 95% !important;
 }
