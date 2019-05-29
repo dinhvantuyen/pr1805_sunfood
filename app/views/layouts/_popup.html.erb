@@ -18,59 +18,58 @@
         </ul>
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-            <form action="#" class="content-popup-form">
+            <%= form_for User.new, url:{controller: :"devise/sessions", action: :create}, :html => {class: "content-popup-form"}  do |f| %>
               <div class="login_popup_email">
-                <label class="control-label"><%= t(".email_popup") %></label>
-                <input type="search" class="form-control login" placeholder="<%= t(".placeholder1") %>">
+                <%= f.label :email, t(".email_popup"), class: "control-label" %>
+                <%= f.text_field :email, placeholder: t(".placeholder1"), class: "form-control login" %>
               </div>
               <div class="password_popup">
-                <label class="control-label"><%= t(".password_popup") %></label>
-                <input type="search" class="form-control login" placeholder="<%= t(".placeholder2") %>">
+                <%= f.label :password, t(".password_popup"), class: "control-label" %>
+                <%= f.password_field :password, placeholder: t(".placeholder2"), class: "form-control login" %>
               </div>
-            </form>
-            <div class="form-group">
-              <p class="reset"><%= t(".forgot_password") %>
-                <a data-toggle="modal" data-target="#reset-password-form" href="#"><%= t(".here") %></a>
-              </p>
-            </div>
+              <div class="form-group">
+                <p class="reset"><%= t(".forgot_password") %>
+                  <a data-toggle="modal" data-target="#reset-password-form" href="#"><%= t(".here") %></a>
+                </p>
+              </div>
+              <div class="form-group btn-login social">
+                <%= f.submit t(".signin"), class: "btn" %>
+              </div>
+            <% end %>
             <div class="form-group social">
-              <a class="btn" href="#"><%= t(".signin") %></a>
-              <a href="#" class="facebook-login">
+              <%= link_to user_facebook_omniauth_authorize_path, class: "facebook-login" do %>
                 <span class="facebook-icon">
                   <i class="tikicon icon-facebook-white"></i>
                 </span>
                 <%= t(".signin_facebook") %>
-              </a>
-              <a href="#" class="google-login">
+              <% end %>
+              <%= link_to user_google_oauth2_omniauth_authorize_path, class: "google-login" do %>
                 <span class="google-icon">
                   <i class="tikicon icon-google-white"></i>
                 </span>
                 <%= t(".signin_google") %>
-              </a>
-              <a href="#" class="zalo-login">
-                <span class="zalo-icon">
-                  <i class="tikicon icon-zalo-white"></i>
-                </span>
-                <%= t(".signin_zalo") %>
-              </a>
+              <% end %>
             </div>
           </div>
           <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="profile-tab">
-            <form action="#" class="content-popup-form">
+
+            <%= form_for User.new, url:{controller: :"devise/registrations", action: :create}, method: :post, :html => {class: "content-popup-form"} do |f| %>
               <div class="sign-in-popup">
-                <label class="control-label"><%= t(".name") %></label>
-                <input type="search" class="form-control login" placeholder="<%= t(".name_holder") %>">
-                <label class="control-label"><%= t(".phone") %></label>
-                <input type="search" class="form-control login" placeholder="<%= t(".phone_holder") %>">
-                <label class="control-label"><%= t(".email") %></label>
-                <input type="search" class="form-control login" placeholder="<%= t(".email_holder") %>">
-                <label class="control-label"><%= t(".password") %></label>
-                <input type="search" class="form-control login" placeholder="<%= t(".password_holder") %>">
+                <%= f.label :name,t(".name"), class: "control-label" %>
+                <%= f.text_field :name, placeholder: t(".name_holder"), class: "form-control login" %>
+                <%= f.label :phone, t(".phone"), class: "control-label" %>
+                <%= f.number_field :phone, placeholder: t(".phone_holder"), class: "form-control login" %>
+                <%= f.label :email, t(".email"), class: "control-label" %>
+                <%= f.email_field :email, placeholder: t(".email_holder"), class: "form-control login" %>
+                <%= f.label :password, t(".password"), class: "control-label" %>
+                <%= f.password_field :password, placeholder: t(".password_holder"), class: "form-control login" %>
+                <%= f.label :password_confirmation, t(".passconfirm"), class: "control-label" %>
+                <%= f.password_field :password_confirmation, placeholder: t(".passconfirm_holder"), class: "form-control login" %>
+                <div class="sign-in-ntn social">
+                  <%= f.submit t(".create_acc"), class: "btn-signup" %>
+                </div>
               </div>
-              <div class="sign-in-ntn social">
-                <a href="#"><%= t(".create_acc") %></a>
-              </div>
-            </form>
+            <% end %>
           </div>
         </div>
       </div>

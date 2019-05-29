@@ -25,7 +25,7 @@ vi:
       signin_zalo: "Đăng nhập với Zalo"
     popup:
       signin: "Đăng nhập"
-      signup: "Đăng ký"
+      signup: "Tạo tài khoản"
       comment1: "Đăng nhập để theo dõi đơn hàng, lưu"
       comment2: "danh sách sản phẩm yêu thích, nhận"
       comment3: "nhiều ưu đãi hấp dẫn."
@@ -44,7 +44,9 @@ vi:
       name_holder: "Nhập họ tên"
       phone_holder: "Số điện thoại"
       email_holder: "Nhập email"
-      password_holder: "Nhập password"
+      password_holder: "Nhập mật khẩu"
+      passconfirm: "Xác nhận mật khẩu"
+      passconfirm_holder: "Nhập xác nhận mật khẩu "
   devise:
     sessions:
       new:
