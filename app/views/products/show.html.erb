@@ -23,33 +23,42 @@
   <main id="main" class="main-content">
     <div class="flex-row container">
       <div class="single-content bg-white clearfix">
-        <div class="col-md-4 float-left">
+        <div class="col-md-5 pd-0 float-left">
           <div class="product-image">
-            <%= image_tag "product/product5.jpg" %>
+            <%= image_tag (@product.image_url if @product.image.presence) || "/assets/product/product5.jpg" %>
           </div>
         </div>
-        <div class="col-md-8 float-left">
+        <div class="col-md-7 pd-0 float-left">
           <div class="description-product">
             <div class="description-item-box">
               <h1>
-                <span>Máy Giặt Sấy Cửa Ngang Inverter Electrolux EWW12853</span>
+                <span><%= @product.name %></span>
               </h1>
             </div>
             <div class="product-brand-box">
               <div class="brand-rating">
                 <span>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                  <% rate = @avg_rate %>
+                  <% while rate > 0 %>
+                    <% if rate > 0.5 %>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    <% else %>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <% end %>
+                    <% rate -= 1 %>
+                  <% end %>
+                  <% unrate = 5 - @avg_rate %>
+                  <% while unrate > 1 %>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <% unrate -= 1 %>
+                  <% end %>
                 </span>
-                <span class="comment-rating">(6 đánh giá)</span>
+                <span class="comment-rating">(<%= @product.reviews.count %> đánh giá)</span>
               </div>
               <div class="product-trademark">
-                <h6>Thương hiệu : </h6>
+                <h6><%= t(".category") %> : </h6>
                 <p>
-                  <a target="_blank" href="http://tiki.vn/thuong-hieu/electrolux.html">Electrolux</a>
+                  <a target="_blank" href="#">Electrolux</a>
                 </p>
               </div>
               <div id="product-sku">
@@ -58,24 +67,24 @@
               </div>
             </div>
             <div class="product-info">
-              <div class="col-md-7 pl-0 float-left">
+              <div class="col-md-7 pd-0 float-left">
                 <div class="product-price">
                   <p>
-                    <span>Giá bán :</span>
+                    <span><%= t(".price") %> :</span>
                     <span class="flat-price">
-                      1.190.000 ₫
+                      <%= @product.sale_price %> ₫
                     </span>
                   </p>
                   <p>
-                    <span class="price-label">Tiết kiệm:</span>
+                    <span class="price-label"><%= t(".save") %>:</span>
                     <span id="span-discount-percent" class="discount-percent">38%</span>
                     <span id="span-saving-price">
                       (650.000&nbsp;₫)
                     </span>
                   </p>
                   <p class="old-price-item" data-value="1700000" id="p-listpirce">
-                    <span class="price-label">Giá thị trường:</span>
-                    <span id="span-list-price">1.700.000&nbsp;₫</span>
+                    <span class="price-label"><%= t(".market_price") %>:</span>
+                    <span id="span-list-price"><%= @product.price %>&nbsp;₫</span>
                   </p>
                 </div>
                 <div class="des-produtc-info clearfix">
@@ -85,15 +94,104 @@
                   <p>Dây HDMI đính kèm</p>
                   <p>Điều khiển từ iPhone, iPad, thiết bị Android</p>
                 </div>
-                <div class="quantity">
-
+                <div class="add-cart">
+                  <div class="quantity clearfix">
+                    <div id="qtySelector" class="quantity-col1">
+                      <p class="quantity-label"><%= t(".quantity") %>:</p>
+                      <p class="tiki-number-input">
+                        <div class="input-group-qtybtn">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">-</button>
+                          </span>
+                          <span class="input-group-addon"></span>
+                          <input id="qty" type="tel" name="qty" value="1" min="1" max="100" class="form-control">
+                          <span class="input-group-addon"></span>
+                          <span class="input-group-btn">
+                            <button class="btn btn-default-plus" type="button">+</button>
+                          </span>
+                        </div>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="btn-add-to-cart">
+                    <button class="add-to-cart" type="button">
+                      <span class="text"><%= t(".add_cart") %></span>
+                    </button>
+                    <a href="#" class="add-to-wishlist">
+                      <span class="product-wishlist">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-5 float-left"></div>
             </div>
           </div>
         </div>
       </div>
+      <div class="chat-rom-shop">
+        <div class="col-md-5 pd-0">
+          <div class="info-shop">
+            <div class="logo-shop">
+              <a href="#">
+                <%= image_tag "/assets/shop.jpg" %>
+              </a>
+            </div>
+            <div class="chat-room-content">
+              <p>
+                riooshop
+                <span>Online 43 Phút Trước</span>
+              </p>
+              <div class="btn chat-button">
+                <button type="button" class="btn btn-tinted-secondary">
+                  <i class="fa fa-comments" aria-hidden="true"></i> Chat Ngay
+                </button>
+                <button type="button" class="btn btn-tinted-secondary">
+                  <i class="fa fa-hospital-o" aria-hidden="true"></i> Xem shop
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="des-product-details">
+        <div class="product-table-title">
+          <h3><%= t(".description") %></h3>
+        </div>
+        <div class="des-product-details-content pd-20 bg-white">
+          <p><%= @product.description %></p>
+          <p style="font-style: italic;">
+            * Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Tuy nhiên tuỳ vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh
+          </p>
+        </div>
+      </div>
+      <div class="product-review">
+        <div class="product-table-title">
+          <h3><%= t(".review") %></h3>
+        </div>
+        <div class="product-review-content bg-white pd-20" id="review-show">
+          <%= render "reviews/review", reviews: @reviews %>
+        </div>
+        <div class="red-more load-more product-review-content bg-white pd-20">
+          <%= link_to t(".load_more"), product_path, id: "load-review" %>
+        </div>
+      </div>
+      <div class="customer-review">
+        <div class="product-table-title">
+          <h3><%= t(".add_review") %></h3>
+        </div>
+        <div class="customer-review-content bg-white clearfix">
+          <%= render "reviews/form", product: @product %>
+        </div>
+      </div>
+      <div class="product-related">
+        <div class="product-table-title">
+          <h3><%= t(".relate") %></h3>
+        </div>
+        <%= render "related_product", products: @products %>
+      </div>
     </div>
   </main>
 </div>
+<!--------- poup login ---------->
+<%= render "layouts/popup" %>
