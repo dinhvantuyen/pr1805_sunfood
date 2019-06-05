@@ -10,6 +10,9 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :comments
   has_many :addresses
+  has_one :image, as: :imageable, dependent: :destroy
+  accepts_nested_attributes_for :image
+  delegate :address, to: :image, prefix: true, allow_nil: true
 
   def self.new_with_session params, session
     super.tap do |user|

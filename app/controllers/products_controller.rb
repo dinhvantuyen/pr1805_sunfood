@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
 
   def show
+    @review = Review.new
+    @review.images.build
     @product = Product.find_by id: params[:id]
     @products = Product.all.order("sale_count desc").limit(5)
     @avg_rate = @product.reviews.average(:rate)&.round(2) || 0

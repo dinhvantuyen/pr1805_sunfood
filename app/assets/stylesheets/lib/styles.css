@@ -3135,3 +3135,14 @@ label.star:before {
 }
 
 /*Rating star end*/
+
+input#review_images_attributes_0_address {
+  font-size: 13px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  margin-bottom: 15px;
+  border: none;
+}
+.popup-gallery img {
+  max-height: 75px;
+  max-width: 75px;
+}

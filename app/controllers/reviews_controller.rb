@@ -3,7 +3,14 @@ class ReviewsController < ApplicationController
   def create
     @product = Product.find_by id: params[:review][:product_id]
     @review = current_user.reviews.build review_params
-    @review.save
+    if @review.save
+      params[:images][:address].each do |a|
+        @images = @review.images.create! address: a
+      end
+    else
+      render :@product_path
+    end
+
     @reviews = @product.reviews.order("created_at desc").limit(3)
     respond_to do |format|
       format.js
@@ -17,7 +24,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit :rate, :content, :product_id
+    params.require(:review).permit :rate, :content, :product_id, images_attributes: [:address]
   end
 
 end

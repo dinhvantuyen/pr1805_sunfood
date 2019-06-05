@@ -20,6 +20,13 @@
     </div>
     <div class="item-content">
       <div class="content"><%= review.content %></div>
+      <div class="popup-gallery">
+        <% review.images.each do |image| %>
+          <%= link_to image.address.url do %>
+            <%= image_tag image.address.url %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 <% end %>
