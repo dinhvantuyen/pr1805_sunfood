@@ -1,4 +1,44 @@
 vi:
+  datetime:
+    distance_in_words:
+      half_a_minute: "30 giây"
+      less_than_x_seconds:
+        one:   "chưa tới 1 giây"
+        other: "chưa tới %{count} giây"
+      x_seconds:
+        one:   "1 giây"
+        other: "%{count} giây"
+      less_than_x_minutes:
+        one:   "chưa tới 1 phút"
+        other: "chưa tới %{count} phút"
+      x_minutes:
+        one:   "1 phút"
+        other: "%{count} phút"
+      about_x_hours:
+        one:   "khoảng 1 giờ"
+        other: "khoảng %{count} giờ"
+      x_days:
+        one:   "1 ngày"
+        other: "%{count} ngày"
+      about_x_months:
+        one:   "khoảng 1 tháng"
+        other: "khoảng %{count} tháng"
+      x_months:
+        one:   "1 tháng"
+        other: "%{count} tháng"
+      about_x_years:
+        one:   "khoảng 1 năm"
+        other: "khoảng %{count} năm"
+      over_x_years:
+        one:   "hơn 1 năm"
+        other: "hơn %{count} năm"
+    prompts:
+      year:   "Năm"
+      month:  "Tháng"
+      day:    "Ngày"
+      hour:   "Giờ"
+      minute: "Phút"
+      second: "Giây"
   placeholder_search: "Tìm sản phẩm, danh mục ..."
   static_pages:
     home:
@@ -79,3 +119,24 @@ vi:
         cancel: "Hủy tài khoản"
         unhappy: "Không hài lòng?"
         back: "Quay lại"
+  products:
+    show:
+      load_more: "Xem thêm"
+      category: "Danh mục"
+      price: "Gía bán"
+      save: "Tiết kiệm"
+      market_price: "Gía thị trường"
+      quantity: "số lượng"
+      add_cart: "Chọn mua"
+      description: "MÔ TẢ SẢN PHẨM"
+      review: "NHẬN XÉT VỀ SẢN PHẨM"
+      add_review: "KHÁCH HÀNG NHẬN XÉT"
+      relate: "SẢN PHẨM LIÊN QUAN"
+  reviews:
+    form:
+      comment: "Nhập nhận xét ..."
+      review_button: "Gửi nhận xét"
+      rating: "Đánh giá của bạn về sản phẩm này"
+      comment: "Viết nhận xét của bạn vào bên dưới"
+    review:
+      buyer_certification: "Chứng nhận đã mua hàng"

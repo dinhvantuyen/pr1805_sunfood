@@ -18,3 +18,4 @@
 //= require lib/owl.carousel.min
 //= require lib/webslidemenu
 //= require lib/main
+//= require lib/load_review

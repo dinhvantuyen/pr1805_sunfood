@@ -1,0 +1,26 @@
+<% reviews.each do |review| %>
+  <div class="list-review-content" data-id="<%= review.id %>">
+    <div class="product-review-start">
+      <span>
+        <% (1..review.rate).each do |i| %>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        <% end %>
+        <% (0...(5-review.rate)).each do |i| %>
+          <i class="fa fa-star-o" aria-hidden="true"></i>
+        <% end %>
+      </span>
+      <span class="title right"><%= time_ago_in_words(review.created_at) %></span>
+    </div>
+    <div class="middle">
+      <span><%= review.user.name %></span>
+      <span>
+        <%= image_tag "/assets/security.png" %>
+        <span class="verify"><%= t(".buyer_certification") %></span>
+      </span>
+    </div>
+    <div class="item-content">
+      <div class="content"><%= review.content %></div>
+    </div>
+  </div>
+<% end %>
+<%#= will_paginate reviews %>

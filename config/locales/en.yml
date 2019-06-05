@@ -79,3 +79,24 @@ en:
         cancel: "Cancel my account"
         unhappy: "Unhappy?"
         back: "Back"
+  products:
+    show:
+      load_more: "Load more"
+      category: "Category"
+      price: "Price"
+      save: "Save"
+      market_price: "Market price"
+      quantity: "quantity"
+      add_cart: "ADD TO CART"
+      description: "Description"
+      review: "Reviews"
+      add_review: "ADD REVIEW"
+      relate: "RELATED PRODUCT"
+  reviews:
+    form:
+      comment: "Insert reviews"
+      review_button: "Send review"
+      rating: "Rating this product"
+      comment: "Comment this product"
+    review:
+      buyer_certification: "Purchase Certification"
