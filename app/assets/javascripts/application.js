@@ -17,5 +17,6 @@
 //= require lib/bootstrap.min
 //= require lib/owl.carousel.min
 //= require lib/webslidemenu
+//= require magnific-popup
 //= require lib/main
 //= require lib/load_review

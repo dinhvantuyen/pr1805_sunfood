@@ -6,6 +6,9 @@ gem "sqlite3"
 gem "puma", "~> 3.11"
 gem "bootstrap-sass"
 gem "will_paginate"
+gem "carrierwave", "1.2.2"
+gem "mini_magick", "4.7.0"
+gem "magnific-popup-rails", "~> 1.1.0"
 gem "font-awesome-rails"
 gem "devise"
 gem "omniauth"
@@ -28,6 +31,7 @@ group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+  gem "fog", "1.42"
 end
 group :test do
   gem "capybara", ">= 2.15"

@@ -2,7 +2,7 @@
   <%= link_to "" do %>
     <span class="percent deal">-60%</span>
     <div class="item-thumbnail">
-      <%= image_tag (product.image_url if product.image.presence) || "product/product5.jpg" %>
+      <%= image_tag (product.images.first.address_url if product.images.presence) || "product/product5.jpg" %>
     </div>
     <div class="product-item-name">
       <p class="title" style="height: 40px;"><i class="icon tikinow-15"></i>Sổ Tay Từ Vựng 120 Trang (7.6 x 13) - Mẫu Ngẫu Nhiên</p>

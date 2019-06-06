@@ -25,7 +25,7 @@
       <div class="single-content bg-white clearfix">
         <div class="col-md-5 pd-0 float-left">
           <div class="product-image">
-            <%= image_tag (@product.image_url if @product.image.presence) || "/assets/product/product5.jpg" %>
+            <%= image_tag (@product.images.first.address_url if @product.images.presence) || "/assets/product/product5.jpg" %>
           </div>
         </div>
         <div class="col-md-7 pd-0 float-left">
@@ -181,7 +181,7 @@
           <h3><%= t(".add_review") %></h3>
         </div>
         <div class="customer-review-content bg-white clearfix">
-          <%= render "reviews/form", product: @product %>
+          <%= render "reviews/form", product: @product, review: @review %>
         </div>
       </div>
       <div class="product-related">

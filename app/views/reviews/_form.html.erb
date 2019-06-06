@@ -1,5 +1,5 @@
 <div class="col-md-5 pd-0 product-customer float-left">
-  <%= form_for Review.new, remote: true do |f| %>
+  <%= form_for review, remote: true do |f| %>
     <%= f.hidden_field :product_id, value: product.id %>
     <div class="customer-rate-form pd-20">
       <label>1. <%= t(".rating") %> : </label>
@@ -13,6 +13,9 @@
     <div class="customer-form-group">
       <label>2. <%= t(".comment") %>:</label>
       <%= f.text_area :content, placeholder: t(".comment"), id: "review_title", class: "form-control input-sm" %>
+      <%= f.fields_for :images do |ff| %>
+        <%= ff.file_field :address, multiple: true, name: "images[address][]" %>
+      <% end %>
       <%= f.submit t(".review_button"), class: "btn btn-add-review" %>
     </div>
   <% end %>
