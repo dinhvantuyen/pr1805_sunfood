@@ -511,7 +511,6 @@ input[type="search"]{
   color: rgb(255, 255, 255);
   position: relative;
   line-height: 14px;
-  letter-spacing: 0.7px;
   font-weight: 400;
   font-size: 13px;
   vertical-align: middle;
@@ -539,7 +538,7 @@ input[type="search"]{
   margin-left: 9px;
   font-size: 12px;
   font-weight: 700;
-  background: rgb(253, 216, 53);
+  background: rgb(255, 71, 0, 1);
   border-radius: 2px;
   padding: 0px 6px;
 }
@@ -1159,7 +1158,7 @@ Css content main
 .icon.tikinow-15{
   width: 53px;
   height: 15px;
-  background-image: url("../img/topicon/tiki-now-15.png");
+  background-image: url("/assets/topicon/tiki-now-15.png");
   background-size: 53px 15px;
 }
 .icon.tikinow-15{
@@ -1200,7 +1199,7 @@ span.percent.deal{
   font-weight: 500;
   width: 40px;
   height: 36px;
-  background-image: url("/assets/deal-tag.png");
+  background-image: url("/assets/topicon/deal-tag.png");
   background-size: 40px 36px;
   margin: 1px 0px 0px;
   background-position: 0px 0px;
@@ -2112,7 +2111,7 @@ Css single
   white-space: nowrap;
   vertical-align: middle;
 }
-#qtySelector #qty{
+#qtySelector #product_order_quantity{
   display: block;
   border: 0;
   border-top: 1px solid #dfdfdf;
