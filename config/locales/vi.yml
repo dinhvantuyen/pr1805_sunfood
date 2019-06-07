@@ -140,3 +140,6 @@ vi:
       comment: "Viết nhận xét của bạn vào bên dưới"
     review:
       buyer_certification: "Chứng nhận đã mua hàng"
+  product_orders:
+    header_cart:
+      cart: "Giỏ hàng"

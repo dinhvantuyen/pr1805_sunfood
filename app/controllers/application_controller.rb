@@ -1,9 +1,13 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :configure_permitted_parameters, if: :devise_controller?
-
+  helper_method :current_order
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  def current_order
+    session[:order_id].present? ? Order.find(session[:order_id]) : Order.new
   end
 
   protected

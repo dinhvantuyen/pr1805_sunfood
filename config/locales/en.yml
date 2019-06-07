@@ -100,3 +100,6 @@ en:
       comment: "Comment this product"
     review:
       buyer_certification: "Purchase Certification"
+  product_orders:
+    header_cart:
+      cart: "Cart"

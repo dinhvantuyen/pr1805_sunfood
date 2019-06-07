@@ -20,3 +20,4 @@
 //= require magnific-popup
 //= require lib/main
 //= require lib/load_review
+//= require lib/cart
