@@ -3145,3 +3145,6 @@ input#review_images_attributes_0_address {
   max-height: 75px;
   max-width: 75px;
 }
+.form-control[readonly] {
+  background-color: #fff;
+}

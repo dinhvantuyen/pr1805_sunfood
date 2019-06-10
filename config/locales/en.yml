@@ -103,3 +103,16 @@ en:
   product_orders:
     header_cart:
       cart: "Cart"
+  carts:
+    index:
+      cart: "Cart"
+      product: "Product"
+      provider: "Provider"
+      quantity: "Quantity"
+      delete: "Delete"
+  product_orders:
+    info_billing:
+      subtotal: "Subtotal"
+      grand_total: "Grand total"
+      vat_added: "VAT Added"
+      checkout: "Proceed checkout"
