@@ -1,0 +1,62 @@
+<%= form_for ProductOrder.new, remote: true, :html => { :id => "form-shopping-cart" } do |f| %>
+  <% current_order.product_orders.each do |product_order| %>
+    <div class="shopping-cart-item clearfix">
+      <div class="col-md-2 float-left">
+        <p class="image-thumbnail">
+          <%= image_tag (product_order.product.images.first.address_url if product_order.product.images.presence) || "/assets/product/product5.jpg", class: "img-responsive" %>
+        </p>
+      </div>
+      <div class="col-md-10 float-left">
+        <div class="box-info-product">
+          <div class="badge-title">
+            <p class="name">
+              <%= link_to product_order.product, target: "_blank" do %>
+                <%= product_order.product.name %>
+              <% end %>
+            </p>
+          </div>
+          <p class="seller-by">
+            <%= t(".provider") %>
+            <span class="firm">
+              <a href="#">Tiki Trading</a>
+            </span>
+          </p>
+          <p class="action-destroy">
+            <%= link_to t(".delete"), product_order_path(product_order), method: :delete, class: "btn btn-delete", remote: true %>
+          </p>
+        </div>
+        <div class="badge-price">
+          <div class="box-price">
+            <p class="price"><%= product_order.product.sale_price %>₫</p>
+            <p class="price2"> <%= product_order.product.price %>₫ <span class="sale">-73%</span>
+            </p>
+          </div>
+        </div>
+        <div class="quantity clearfix">
+          <div id="qtySelector" class="quantity-col1">
+            <p class="quantity-label"><%= t(".quantity") %>:</p>
+            <p class="tiki-number-input">
+              <div class="input-group-qtybtn">
+                <span class="input-group-btn">
+                  <%= link_to product_order_path(product_order, type: "dec"), method: :patch, remote: true do %>
+                    <%= button_tag "-", class: "btn btn-default" %>
+                  <% end %>
+                </span>
+                <span class="input-group-addon"></span>
+                <div id="product-order-quantity-<%= product_order.id %>">
+                  <%= render "product_orders/quantity", product_order: product_order %>
+                </div>
+                <span class="input-group-addon"></span>
+                <span class="input-group-btn">
+                  <%= link_to product_order_path(product_order, type: "inc"), method: :patch, remote: true do %>
+                    <%= button_tag "+", class: "btn btn-default-plus" %>
+                  <% end %>
+                </span>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

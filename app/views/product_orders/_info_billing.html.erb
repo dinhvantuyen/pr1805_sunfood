@@ -1,0 +1,22 @@
+<div class="info-billing-content">
+  <div class="box-billing-money">
+    <p class="list-info-price">
+      <span><%= t(".subtotal") %>: </span>
+      <strong><%= current_order.subtotal %> ₫</strong>
+    </p>
+  </div>
+  <div class="box-billing-money">
+    <div class="total clearfix">
+      <span class="text-label"><%= t(".grand_total") %>: </span>
+      <div class="amount">
+        <p>
+          <strong><%= current_order.subtotal %> ₫ </strong>
+        </p>
+        <p class="text-right">
+          <small>(<%= t(".vat_added") %>)</small>
+        </p>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-danger btn-checkout" onclick="location.href='#';"><%= t(".checkout") %></button>
+</div>

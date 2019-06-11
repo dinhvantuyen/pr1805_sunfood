@@ -63,11 +63,11 @@
                 </div>
               </div>
               <div class="index-cart">
-                <a href="#">
+                <%= link_to carts_path do %>
                   <div class="header-cart">
                     <%= render "product_orders/header_cart" %>
                   </div>
-                </a>
+                <% end %>
               </div>
             </div>
           </div>
