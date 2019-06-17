@@ -1,3 +1,4 @@
 $(".header-cart").html("<%= j render("product_orders/header_cart") %>")
 $("#product-order-quantity-<%= @product_order.id %>").html("<%= j render "product_orders/quantity", product_order: @product_order %>")
 $(".info-billing").html("<%= j render "product_orders/info_billing" %>")
+

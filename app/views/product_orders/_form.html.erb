@@ -22,7 +22,7 @@
             </span>
           </p>
           <p class="action-destroy">
-            <%= link_to t(".delete"), product_order_path(product_order), method: :delete, class: "btn btn-delete", remote: true %>
+            <%= link_to t(".delete"), product_order_path(product_order), method: :delete, data: {confirm: "Delete?"}, class: "btn btn-delete", remote: true %>
           </p>
         </div>
         <div class="badge-price">

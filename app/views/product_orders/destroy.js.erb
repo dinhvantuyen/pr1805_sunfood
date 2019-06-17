@@ -1,3 +1,7 @@
 $(".header-cart").html("<%= j render("product_orders/header_cart") %>")
-$(".info-billing").html("<%= j render "product_orders/info_billing" %>")
-$("#product-order-form").html("<%= j render "product_orders/form" %>")
+<% if !current_order.product_orders.presence %>
+  $("#cart-content").html("<%= j render "product_orders/empty_cart" %>")
+<% else %>
+  $(".info-billing").html("<%= j render "product_orders/info_billing" %>")
+  $("#product-order-form").html("<%= j render "product_orders/form" %>")
+<% end %>

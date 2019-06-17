@@ -22,29 +22,36 @@
 <main id="main" class="main-content">
   <div class="shopping-cart clearfix">
     <div class="flex-row container">
-      <h5 class="shopping-title"><%= t(".cart") %> <span>(<%= current_order.product_orders.count %> <%= t(".product") %>)</span></h5>
-      <div class="col-md-9 pl-0 float-left">
-        <div id="product-order-form">
-          <%= render "product_orders/form" %>
-        </div>
-      </div>
-      <div class="col-md-3 float-left">
-        <div class="info-billing">
-          <%= render "product_orders/info_billing" %>
-        </div>
-        <!-- <div id="coupon">
-          <div class="panel panel-default clearfix">
-            <div class="panel-heading">
-              <h4 class="panel-title">Mã giảm giá / Quà tặng</h4>
-            </div>
-            <div class="input-group coupon">
-              <input id="coupon-text" placeholder="Nhập ở đây.." type="text" class="form-control" value="">
-              <span class="input-group-btn">
-                <button class="btn btn-default btn-coupon" type="button">Đồng ý</button>
-              </span>
+      <div id="cart-content">
+        <h5 class="shopping-title"><%= t(".cart") %> <span>(<%= current_order.product_orders.count %> <%= t(".product") %>)</span>
+        </h5>
+        <% if current_order.product_orders.presence %>
+          <div class="col-md-9 pl-0 float-left">
+            <div id="product-order-form">
+              <%= render "product_orders/form" %>
             </div>
           </div>
-        </div> -->
+          <div class="col-md-3 float-left">
+            <div class="info-billing">
+              <%= render "product_orders/info_billing" %>
+            </div>
+            <!-- <div id="coupon">
+              <div class="panel panel-default clearfix">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Mã giảm giá / Quà tặng</h4>
+                </div>
+                <div class="input-group coupon">
+                  <input id="coupon-text" placeholder="Nhập ở đây.." type="text" class="form-control" value="">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default btn-coupon" type="button">Đồng ý</button>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        <% else %>
+          <%= render "product_orders/empty_cart" %>
+        <% end %>
       </div>
     </div>
   </div>

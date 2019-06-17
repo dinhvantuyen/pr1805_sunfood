@@ -18,5 +18,8 @@
       </div>
     </div>
   </div>
-  <button type="button" class="btn btn-danger btn-checkout" onclick="location.href='#';"><%= t(".checkout") %></button>
+  <!-- <button type="button" class="btn btn-danger btn-checkout" onclick="location.href='#';"><%#= t(".checkout") %></button> -->
+  <%= link_to new_checkout_path do %>
+    <%= button_tag t(".checkout"), class: "btn btn-danger btn-checkout" %>
+  <% end %>
 </div>

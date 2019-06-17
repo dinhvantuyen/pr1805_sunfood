@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :check_login, only: [:create, :update]
 
   def create
     @product = Product.find_by id: params[:review][:product_id]
