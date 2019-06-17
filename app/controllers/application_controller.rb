@@ -3,6 +3,12 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
   helper_method :current_order
+  include SessionsHelper
+
+  def after_sign_in_path_for(resource)
+    session[:forwarding_url] || stored_location_for(resource) || root_path
+  end
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end

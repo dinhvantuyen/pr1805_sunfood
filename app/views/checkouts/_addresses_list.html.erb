@@ -1,0 +1,9 @@
+<% if current_user.addresses.presence %>
+  <% current_user.addresses.each do |address| %>
+    <% if address == current_user.addresses.first %>
+      <%= render "checkouts/address_default", address: address %>
+    <% else %>
+      <%= render "checkouts/address", address: address %>
+    <% end %>
+  <% end %>
+<% end %>

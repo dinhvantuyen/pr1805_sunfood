@@ -12,7 +12,10 @@ Rails.application.routes.draw do
     namespace :admin do
       root "dashboard#index"
     end
+
+    resources :addresses
     resources :carts
+    resources :checkouts
     resources :reviews
   end
 end

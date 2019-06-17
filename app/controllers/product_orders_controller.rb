@@ -21,7 +21,7 @@ class ProductOrdersController < ApplicationController
     if params[:type] == "inc"
       @product_order.quantity += 1
       @product_order.update_attributes quantity: @product_order.quantity
-    elsif params[:type] == "dec"
+    elsif params[:type] == "dec"&& (@product_order.quantity > 0)
       @product_order.quantity -= 1
       @product_order.update_attributes quantity: @product_order.quantity
     end
