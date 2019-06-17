@@ -116,3 +116,36 @@ en:
       grand_total: "Grand total"
       vat_added: "VAT Added"
       checkout: "Proceed checkout"
+  shops:
+    index:
+      welcome: "Welcome to Sunshop - seller channel"
+      description: "Sunshop - Seller channel is a shop management tool, making it
+      easy for you to classify products, track orders, take care of customers
+      and evaluate shop operations.As a shop owner, please read carefully
+      and compliance"
+      product_title: "Create product"
+      category_title: "Create category"
+      order: "order"
+      statistical: "statistical"
+      revenue: "Revenue"
+    products:
+      index:
+        all_product: "All product"
+        stocking: "Stocking"
+        out_stock: "Out of stock"
+        locked: "Locked"
+        hidden: "Has been hidden"
+        new_porduct: "New product"
+      new:
+        product_name: "Products name"
+        category_product: "Category product"
+        product_description: "Product Description"
+        product_price: "Product price"
+        promotional_price: "Promotional price"
+        status_product: "Product status"
+        image: "Images"
+        info: "Basic information"
+        info_sell: "Sales information"
+        management: "Communication management"
+        add_new: "Add new"
+      show:

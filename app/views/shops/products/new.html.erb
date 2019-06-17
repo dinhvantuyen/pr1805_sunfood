@@ -1,0 +1,103 @@
+<div class="new shop-content">
+  <div class="flex-row container">
+    <div class="col-md-12">
+      <%= form_for [:shops, @product] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+        <div class="box-body pad">
+          <div class="form-group">
+            <div class="form_new_product">
+              <h2><%= t(".info") %></h2>
+              <div class="form-content mb-3">
+                <label class="col-md-2 control-label"> <%= t(".product_name") %>:
+                  <span class="required">
+                    *
+                  </span>
+                </label>
+                <div class="col-md-10 mg-10">
+                  <%= f.text_field :name, class: "form-control" %>
+                </div>
+              </div>
+              <div class="form-content mb-3">
+                <label class="col-md-2 control-label"> <%= t(".category_product") %>:
+                  <span class="required">
+                    *
+                  </span>
+                </label>
+                <div class="col-md-10 mg-10">
+                  <div class="shop-category-list ">
+                    <%= f.collection_check_boxes :category_ids,
+                    Category.all, :id, :name do |category| %>
+                      <ul class="select-category">
+                        <li>
+                          <%= category.check_box %>
+                          <%= category.label %>
+                        </li>
+                      </ul>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+              <div class="form-content mb-3">
+                <label class="col-md-2 control-label"> <%= t(".product_description") %>:
+                  <span class="required">
+                    *
+                  </span>
+                </label>
+                <div class="col-md-10 mg-10">
+                  <%= f.text_area :description, class: "form-control" %>
+                </div>
+              </div>
+            </div>
+            <div class ="form_new_product">
+              <h2><%= t(".info_sell") %></h2>
+              <div class="form-content mb-3">
+                <label class="col-md-2 control-label"> <%= t(".product_price") %>:
+                  <span class="required">
+                    *
+                  </span>
+                </label>
+                <div class="col-md-10 mg-10">
+                  <%= f.text_field :price, class: "form-control" %>
+                </div>
+              </div>
+              <div class="form-content mb-3">
+                <label class="col-md-2 control-label"> <%= t(".promotional_price") %>:
+                  <span class="required">
+                    *
+                  </span>
+                </label>
+                <div class="col-md-10 mg-10">
+                  <%= f.text_field :sale_price, class: "form-control" %>
+                </div>
+              </div>
+              <div class="form-content mb-3">
+                <label class="col-md-2 control-label"> <%= t(".status_product") %>:
+                  <span class="required">
+                    *
+                  </span>
+                </label>
+                <div class="col-md-10 mg-10">
+                  <%= f.select :status, options_for_select(["Select...","Published", "Not Published"]),{},class: "form-control" %>
+                </div>
+              </div>
+            </div>
+            <div class ="form_new_product">
+              <h2><%= t(".management") %></h2>
+              <div class="form-content mb-3">
+                <label class="col-md-2 control-label"> <%= t(".image") %>:
+                  <span class="required">
+                    *
+                  </span>
+                </label>
+                <div class="col-md-10 mg-10">
+                  <%= f.file_field :image, class: "glyphicon glyphicon-camera" %>
+                </div>
+              </div>
+            </div>
+            <%= f.submit t(".add_new"), class: "btn btn-success" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
