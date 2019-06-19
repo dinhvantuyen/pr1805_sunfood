@@ -21,3 +21,4 @@
 //= require lib/main
 //= require lib/load_review
 //= require lib/cart
+//= require toastr

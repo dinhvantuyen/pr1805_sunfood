@@ -7,4 +7,10 @@ module SessionsHelper
     redirect_to new_user_session_path
   end
 
+  def check_order
+    return if current_order.product_orders.presence
+    flash[:warning] = "Tiếp tục mua sắm nào!"
+    redirect_to root_url
+  end
+
 end

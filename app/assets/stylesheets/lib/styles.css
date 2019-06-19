@@ -329,6 +329,7 @@ input[type="search"]{
   line-height: 14px;
   letter-spacing: 0.9px;
   margin: 0px 0px 0px 10px;
+  min-width: 88px;
 }
 .featured-box span{
   color: rgb(255, 255, 255);
@@ -553,6 +554,7 @@ input[type="search"]{
   border-image: initial;
   padding: 8px 8px;
   border-radius: 4px;
+  min-width: 126px;
 }
 .tikicon.icon-cart {
   background-image: url("/assets/topicon/sprite.png");
@@ -3779,4 +3781,35 @@ Css shop
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.contain-table  {
+  margin-top: 62px;
+  margin-bottom: 20px;
+  min-height: 340px;
+}
+
+#checkout-list {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+#checkout-list td, th {
+  line-height: 1.7;
+  color: #333;
+  font-size: 14px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.pull-left li a, .pull-right li a {
+  letter-spacing: .5px;
+  font-size: 12px !important;
+  color: #fff !important;
+  font-weight: 300;
+  font-family: sans-serif !important;
+  padding: 2px 8px 0px !important;
+  line-height: 28px;
+}
+
+.pull-right li {
+  display: inline-block;
 }

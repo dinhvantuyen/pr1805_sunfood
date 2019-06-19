@@ -2,17 +2,17 @@
   <div class="checkout-add-form">
     <div class="checkout-content-customer">
       <p class="name"><%= address.user.name %></p>
-      <span class="default">Mặc định</span>
-      <p class="address" title="Kiến Hưng, Quận Hà đông, TP Hà Nội">
+      <span class="default"><%= t(".default") %></span>
+      <p class="address">
         <%= address.address %>
       </p>
       <p class="address"><%= address.country %></p>
-      <p class="phone">Điện thoại: <%= address.phone %></p>
-      <button type="button" class="btn-saving-address">
-        Giao đến địa chỉ này
-      </button>
+      <p class="phone"><%= t(".phone") %>: <%= address.phone %></p>
+      <%= link_to checkouts_path(address_id: address.id) do %>
+        <%= button_tag t(".deliver"), class: "btn-saving-address" %>
+      <% end %>
       <%= link_to edit_address_path(address), remote: true do %>
-        <%= button_tag "Sửa", class: "btn-edit-address" %>
+        <%= button_tag t(".edit"), class: "btn-edit-address" %>
       <% end %>
     </div>
   </div>

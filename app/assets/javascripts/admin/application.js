@@ -16,3 +16,4 @@
 //= require turbolinks
 //= require admin-lte
 //= require ./lib/custom
+//= require toastr

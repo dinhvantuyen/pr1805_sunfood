@@ -1,0 +1,19 @@
+<%= form_for address, remote: true do |f| %>
+  <div class="modal-body">
+    <div class="form-group">
+      <%= render "shared/error_messages", object: f.object %>
+      <%= f.label :phone, t(".phone"), class: "col-form-label" %>
+      <%= f.telephone_field :phone, class: "form-control", id: "recipient-name" %>
+      <%= f.label :address, t(".address"), class: "col-form-label" %>
+      <%= f.text_field :address, class: "form-control" %>
+      <%= f.label :city, t(".city"), class: "col-form-label" %>
+      <%= f.text_field :city, class: "form-control" %>
+      <%= f.label :country, t(".country"), class: "col-form-label" %>
+      <%= f.text_field :country, class: "form-control" %>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <%= button_tag t(".close"), class: "btn btn-secondary", "data-dismiss": "modal" %>
+    <%= f.submit t(".update"), class: "btn btn-primary"%>
+  </div>
+<% end %>
