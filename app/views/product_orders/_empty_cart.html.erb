@@ -1,5 +1,5 @@
 <div class="empty-cart bg-white">
   <span class="mascot-image"></span>
-  <p class="message">Không có sản phẩm nào trong giỏ hàng của bạn.</p>
-  <a href="#" class="btn btn-yellow">Tiếp tục mua sắm</a>
+  <p class="message"><%= t(".no_product") %></p>
+  <%= link_to t(".continue"), root_url, class: "btn btn-yellow" %>
 </div>

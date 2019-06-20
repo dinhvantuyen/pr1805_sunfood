@@ -1,17 +1,17 @@
 <main id="main" class="main-content">
   <div class="flex-row container">
     <div class="checkout-info-customer clearfix">
-      <h3> 2. Địa chỉ giao hàng</h3>
+      <h3> 1. <%= t(".billing_add") %></h3>
       <h5>
-        Chọn địa chỉ giao hàng có sẵn bên dưới:
+        <%= t(".available_add") %>:
       </h5>
       <div id="address-list">
         <%= render "addresses_list" %>
       </div>
     </div>
     <p class="other col-md-12">
-      Bạn muốn giao hàng đến địa chỉ khác?
-      <%= link_to "Thêm địa chỉ giao hàng mới", new_address_path, id: "addNewAddress", remote: true %>
+      <%= t(".other_add") %>
+      <%= link_to t(".add_new"), new_address_path, id: "addNewAddress", remote: true %>
     </p>
   </div>
 </main>

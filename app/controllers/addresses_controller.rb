@@ -4,7 +4,9 @@ class AddressesController < ApplicationController
 
   def create
     @address = current_user.addresses.build address_params
-    @address.save
+    unless @address.save
+      render :create_valid
+    end
   end
 
   def edit
@@ -13,7 +15,10 @@ class AddressesController < ApplicationController
 
   def update
     @address = Address.find(params[:id])
-    @address.update address_params
+    unless @address.update address_params
+      render :update_valid
+    end
+
   end
 
   def destroy

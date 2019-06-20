@@ -1,5 +1,9 @@
 en:
   placeholder_search: "Search products, Category ..."
+  activerecord:
+    errors:
+      full_messages:
+        format: "%{attribute} %{message}"
   static_pages:
     home:
       tiki_deal: "Tiki Deal"
@@ -103,6 +107,14 @@ en:
   product_orders:
     header_cart:
       cart: "Cart"
+    empty_cart:
+      no_product: "Empty Cart!"
+      continue: "Continue shopping!"
+    info_billing:
+      subtotal: "Subtotal"
+      grand_total: "Grand total"
+      vat_added: "VAT Added"
+      checkout: "Proceed checkout"
   carts:
     index:
       cart: "Cart"
@@ -110,12 +122,6 @@ en:
       provider: "Provider"
       quantity: "Quantity"
       delete: "Delete"
-  product_orders:
-    info_billing:
-      subtotal: "Subtotal"
-      grand_total: "Grand total"
-      vat_added: "VAT Added"
-      checkout: "Proceed checkout"
   shops:
     index:
       welcome: "Welcome to Sunshop - seller channel"
@@ -149,3 +155,31 @@ en:
         management: "Communication management"
         add_new: "Add new"
       show:
+  checkouts:
+    address:
+      phone: "Phone"
+      deliver: "Ship to this address"
+      delete: "Delete"
+      edit: "Edit"
+    address_default:
+      phone: "Phone"
+      deliver: "Ship to this address"
+      default: "Default"
+      edit: "Edit"
+    new:
+      billing_add: "Delivery Address"
+      available_add: "Select available address"
+      other_add: "Delivery to other address?"
+      add_new: "Add new address"
+  addresses:
+    modal_new:
+      new_add: "Add New Address"
+    modal_edit:
+      edit_add: "Edit Your Address"
+    modal_form:
+      phone: "Phone:"
+      address: "Address:"
+      city: "city:"
+      country: "Country:"
+      close: "Close"
+      update: "Send"

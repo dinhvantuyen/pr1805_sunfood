@@ -11,6 +11,7 @@ gem "mini_magick", "4.7.0"
 gem "magnific-popup-rails", "~> 1.1.0"
 gem "font-awesome-rails"
 gem "devise"
+gem "devise-i18n"
 gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "omniauth-facebook"
@@ -22,6 +23,7 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "adminlte-rails"
+gem "toastr-rails"
 gem "bootsnap", ">= 1.1.0", require: false
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

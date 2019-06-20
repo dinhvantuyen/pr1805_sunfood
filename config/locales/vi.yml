@@ -1,4 +1,13 @@
 vi:
+  activerecord:
+    errors:
+      models:
+        address:
+          attributes:
+            address:
+              blank: "không được để trống!"
+            phone:
+              blank: "không được để trống!"
   datetime:
     distance_in_words:
       half_a_minute: "30 giây"
@@ -143,6 +152,14 @@ vi:
   product_orders:
     header_cart:
       cart: "Giỏ hàng"
+    empty_cart:
+      no_product: "Không có sản phẩm nào trong giỏ hàng của bạn."
+      continue: "Tiếp tục mua sắm"
+    info_billing:
+      subtotal: "Tạm tính"
+      grand_total: "Thành tiền"
+      vat_added: "Đã bao gồm VAT"
+      checkout: "Tiến hành đặt hàng"
   carts:
     index:
       cart: "Giỏ hàng"
@@ -150,12 +167,6 @@ vi:
       provider: "Cung cấp bởi"
       quantity: "Số lượng"
       delete: "Xóa"
-  product_orders:
-    info_billing:
-      subtotal: "Tạm tính"
-      grand_total: "Thành tiền"
-      vat_added: "Đã bao gồm VAT"
-      checkout: "Tiến hành đặt hàng"
   shops:
     index:
       welcome: "Chào mừng bạn đến với Sunshop - kênh người bán"
@@ -188,3 +199,31 @@ vi:
         management: "Quản lý truyền thông"
         add_new: "Thêm mới"
       show:
+  checkouts:
+    address:
+      phone: "Điện thoại"
+      deliver: "Giao đến địa chỉ này"
+      delete: "Xóa"
+      edit: "Sửa"
+    address_default:
+      phone: "Điện thoại"
+      deliver: "Giao đến địa chỉ này"
+      default: "Mặc định"
+      edit: "Sửa"
+    new:
+      billing_add: "Địa chỉ giao hàng"
+      available_add: "Chọn địa chỉ giao hàng có sẵn bên dưới"
+      other_add: "Bạn muốn giao hàng đến địa chỉ khác?"
+      add_new: "Thêm địa chỉ giao hàng mới"
+  addresses:
+    modal_new:
+      new_add: "Thêm Địa Chỉ Mới"
+    modal_edit:
+      edit_add: "Sửa Địa Chỉ"
+    modal_form:
+      phone: "Điện thoại:"
+      address: "Địa chỉ:"
+      city: "Thành Phố:"
+      country: "Quốc gia:"
+      close: "Đóng"
+      update: "Gửi"

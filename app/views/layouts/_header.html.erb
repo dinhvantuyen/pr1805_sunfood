@@ -1,14 +1,48 @@
 <header id="header" class="header clearfix">
   <div class="header-wrapper">
+    <div id="top-bar" class="header-top hide-for-sticky nav-dark">
+      <div class="flex-row container">
+        <div class="flex-col hide-for-medium flex-right">
+          <ul class="nav top-bar-nav nav-small">
+            <div class="col-md-6">
+              <div class="pull-left">
+                <li>
+                  <a href="#" class="nav-top-link">
+                    <i class="fa fa-certificate" aria-hidden="true"></i>
+                    <span>Kênh bán hàng</span>
+                  </a>
+                </li>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="pull-right">
+                <li>
+                  <%= link_to "/en", class: "nav-top-link" do %>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <span>English</span>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to "/vi", class: "nav-top-link" do %>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <span>Việt Nam</span>
+                  <% end %>
+                </li>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
     <!-- start header-main -->
     <div id="masthead" class="header-main hide-for-sticky">
       <div class="flex-row container">
         <div class="header-middle clearfix">
           <div class="col-md-2 col-xs-12 float-left pl-0">
             <div class="logo">
-              <a href="#">
+              <%= link_to root_url do %>
                 <%= image_tag "logo.png" %>
-              </a>
+              <% end %>
             </div>
           </div>
           <div class="col-md-5 col-xs-12 float-left">

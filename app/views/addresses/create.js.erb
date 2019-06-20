@@ -1,2 +1,6 @@
-$("#address-list").html("<%= j render "checkouts/addresses_list" %>")
-$('#exampleModal1').modal('hide');
+<% if current_user.addresses.last.persisted? %>
+  $("#address-list").html("<%= j render "checkouts/addresses_list" %>")
+  $('#exampleModal1').modal('hide');
+<% else %>
+  $('#exampleModal1').modal('hide');
+<% end %>
