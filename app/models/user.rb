@@ -11,6 +11,9 @@ class User < ApplicationRecord
   has_many :comments
   has_many :addresses, dependent: :destroy
   accepts_nested_attributes_for :addresses
+  has_many :addresses
+  has_many :user_categories
+  has_many :categories, through: :user_categories
   has_one :image, as: :imageable, dependent: :destroy
   accepts_nested_attributes_for :image
   delegate :address, to: :image, prefix: true, allow_nil: true

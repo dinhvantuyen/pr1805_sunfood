@@ -10,15 +10,15 @@
       <div class="content">
         <div class="button-cotent center clearfix">
           <div class="button">
-            <%= link_to new_shops_product_path, class: "shop-button bg-blue" do %>
+            <%= link_to shops_products_path, class: "shop-button bg-blue" do %>
               <i class="fa fa-gift" aria-hidden="true"></i>
             <% end %>
             <div class="sr"><%= t(".product_title") %></div>
           </div>
           <div class="button">
-            <a href="#" class="shop-button bg-oranges" target="_blank">
+            <%= link_to shops_categories_path, class: "shop-button bg-oranges" do %>
               <i class="fa fa-list" aria-hidden="true"></i>
-            </a>
+            <% end %>
             <div class="sr"><%= t(".category_title") %></div>
           </div>
           <div class="button">

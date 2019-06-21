@@ -1,0 +1,39 @@
+<div class="shop-categories">
+  <div class="flex-row container">
+    <div class="col-md-12">
+      <div class="shop-categories-list">
+        <h3><%= t(".display_name") %></h3>
+        <div class="item-collection__list">
+          <div class="item-collection__list-header">
+            <%= link_to new_shops_category_path, class: "add-ember-view" do %>
+              <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+              <%= t(".button_addnew") %>
+            <% end %>
+            <span>
+              <i class="fa fa-list" aria-hidden="true"></i> <%= t(".my_catalog") %>
+            </span>
+            <div class="my-catelog">
+              <% @category.each do |category| %>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="name"><%= category.name %></td>
+                      <td class="details">
+                        <%= link_to  t(".details"), edit_shops_category_path(category) %>
+                      </td>
+                      <td class="delete">
+                        <%= link_to shops_category_path(category), data: { confirm: "Are you sure?" }, method: :delete do %>
+                          <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        <% end %>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

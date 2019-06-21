@@ -8,6 +8,10 @@ vi:
               blank: "không được để trống!"
             phone:
               blank: "không được để trống!"
+        category:
+          attributes:
+            name:
+              blank: "Không được để trống!"
   datetime:
     distance_in_words:
       half_a_minute: "30 giây"
@@ -202,6 +206,20 @@ vi:
         management: "Quản lý truyền thông"
         add_new: "Thêm mới"
       show:
+    categories:
+      index:
+        display_name: "Danh mục hiển thị"
+        my_catalog: "Danh mục của tôi"
+        button_addnew: "Thêm danh mục"
+        details: "Chi tiết"
+      new:
+        add_new_cat: "Thêm mới danh mục"
+        cat_name: "Tên danh mục"
+        add_new: "Thêm mới"
+      edit:
+        edit_categories: "Chỉnh sửa danh mục"
+        cat_name: "Tên danh mục"
+        update: "Cập nhật"
   checkouts:
     address:
       phone: "Điện thoại"

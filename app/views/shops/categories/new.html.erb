@@ -1,0 +1,27 @@
+<div class="new shop-content">
+  <div class="flex-row container">
+    <div class="col-md-12">
+    <%= form_for [:shops, @category] do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+      <div class="box-body pad">
+        <div class="form-group">
+          <div class="form_new_product">
+            <h2><%= t(".add_new_cat") %></h2>
+            <div class="form-content mb-3">
+              <label class="col-md-2 control-label"> <%= t(".cat_name") %>:
+                <span class="required">
+                  *
+                </span>
+              </label>
+              <div class="col-md-10 mg-10">
+                <%= f.text_field :name, class: "form-control" %>
+              </div>
+            </div>
+            <%= f.submit t(".add_new"), class: "btn btn-success" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>

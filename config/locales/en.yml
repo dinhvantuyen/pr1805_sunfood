@@ -1,4 +1,8 @@
 en:
+  activerecord:
+    errors:
+      full_messages:
+        format: "%{attribute} %{message}"
   placeholder_search: "Search products, Category ..."
   activerecord:
     errors:
@@ -158,6 +162,20 @@ en:
         management: "Communication management"
         add_new: "Add new"
       show:
+    categories:
+      index:
+        display_name: "List displayed"
+        my_catalog: "My catalog"
+        button_addnew: "Add new"
+        details: "detail"
+      new:
+        add_new_cat: "Add new category"
+        cat_name: "category Name"
+        add_new: "Add new"
+      edit:
+        edit_categories: "Edit categories"
+        cat_name: "Categories Name"
+        update: "Update"
   checkouts:
     address:
       phone: "Phone"
@@ -199,3 +217,4 @@ en:
       country: "Country:"
       close: "Close"
       update: "Send"
+

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :shops, only: [:index]
     namespace :shops do
       resources :products
+      resources :categories
     end
     namespace :admin do
       root "dashboard#index"

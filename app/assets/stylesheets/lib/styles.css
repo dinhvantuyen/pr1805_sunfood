@@ -2845,7 +2845,7 @@ input#coupon-text{
   width: 65%;
   line-height: 22px;
 }
-#coupon span.input-group-btn{button.btn.btn-default.btn-coupon
+#coupon span.input-group-btn, button.btn.btn-default.btn-coupon{
   font-size: 0;
   white-space: nowrap;
 }
@@ -3797,7 +3797,6 @@ Css shop
   padding: 0;
   margin: 0;
 }
-
 .contain-table  {
   margin-top: 62px;
   margin-bottom: 20px;
@@ -3848,4 +3847,51 @@ Css shop
 .scroll-cart {
   height: 500px;
   overflow: auto;
+}
+.shop-categories-list{
+  padding: 35px 40px 48px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+.add-ember-view{
+  display: block;
+  border: 1px dashed #eee;
+  background: #f1f1f1;
+  text-align: center;
+  padding: 20px 0 10px;
+  font-size: 15px;
+  color: #189eff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.add-ember-view:hover{
+  color: #189eff;
+}
+.my-catelog{
+  border-top: 1px solid #eee;
+}
+.my-catelog td{
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+}
+.my-catelog td.name{
+  font-weight: 600;
+  text-align: left;
+  padding-left: 0;
+  display: block;
+  color: #4C4C4C;
+  font-size: 14px;
+  position: relative;
+}
+.my-catelog td.details a{
+  color: #666666;
+  display: inline-block;
+  border: 1px solid #e8e8e8;
+  padding: 0 20px;
+  line-height: 30px;
+  border-radius: 16px;
+  cursor: pointer;
 }
