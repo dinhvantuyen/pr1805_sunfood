@@ -10,3 +10,13 @@ Product.create!(
 Category.create!(name: "Đồ ăn nhanh")
 Category.create!(name: "Đồ nướng")
 Category.create!(name: "Piza")
+
+100.times do |n|
+  name = Faker::Food.sushi
+  description = Faker::Food.description
+  sale_price = 80 + n
+  price = 100 + n
+  sale_count= 100 + n
+  created_at = (rand*40).days.ago
+  Product.create!(name: name, description: description, price: price, sale_price: sale_price, sale_count: sale_count, created_at: created_at)
+end

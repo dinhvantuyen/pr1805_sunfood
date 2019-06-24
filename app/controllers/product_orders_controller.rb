@@ -1,4 +1,5 @@
 class ProductOrdersController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def create
     @product_order = ProductOrder.new
@@ -21,7 +22,7 @@ class ProductOrdersController < ApplicationController
     if params[:type] == "inc"
       @product_order.quantity += 1
       @product_order.update_attributes quantity: @product_order.quantity
-    elsif params[:type] == "dec"&& (@product_order.quantity > 0)
+    elsif params[:type] == "dec"&& (@product_order.quantity > 1)
       @product_order.quantity -= 1
       @product_order.update_attributes quantity: @product_order.quantity
     end

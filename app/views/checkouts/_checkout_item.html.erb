@@ -1,0 +1,11 @@
+<tr>
+  <td>
+    <%= image_tag "product/product5.jpg" %>
+    <div class="product-info">
+      <h5><%= product_order.product.name %></h5>
+    </div>
+  </td>
+  <td><%= number_to_currency_br(product_order.product.sale_price) %></td>
+  <td><%= product_order.quantity %></td>
+  <td><%= number_to_currency_br(product_order.quantity * product_order.product.sale_price) %></td>
+</tr>

@@ -22,13 +22,15 @@
             </span>
           </p>
           <p class="action-destroy">
-            <%= link_to t(".delete"), product_order_path(product_order), method: :delete, data: {confirm: "Delete?"}, class: "btn btn-delete", remote: true %>
+            <div class="product-info">
+              <%= link_to t(".remove"), product_order_path(product_order), method: :delete, data: {confirm: "Delete?"}, class: "btn delete", remote: true %>
+            </div>
           </p>
         </div>
         <div class="badge-price">
           <div class="box-price">
-            <p class="price"><%= product_order.product.sale_price %>₫</p>
-            <p class="price2"> <%= product_order.product.price %>₫ <span class="sale">-73%</span>
+            <p class="price"><%= number_to_currency_br(product_order.product.sale_price) %></p>
+            <p class="price2"> <%= number_to_currency_br(product_order.product.price) %><span class="sale">-73%</span>
             </p>
           </div>
         </div>
