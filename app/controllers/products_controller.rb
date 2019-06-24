@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-
+  skip_before_action :authenticate_user!
   def show
     @review = Review.new
     @review.images.build

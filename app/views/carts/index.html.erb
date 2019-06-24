@@ -28,7 +28,9 @@
         <% if current_order.product_orders.presence %>
           <div class="col-md-9 pl-0 float-left">
             <div id="product-order-form">
-              <%= render "product_orders/form" %>
+              <div class="scroll-cart">
+                <%= render "product_orders/form" %>
+              </div>
             </div>
           </div>
           <div class="col-md-3 float-left">

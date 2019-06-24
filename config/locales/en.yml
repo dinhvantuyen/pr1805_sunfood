@@ -115,6 +115,9 @@ en:
       grand_total: "Grand total"
       vat_added: "VAT Added"
       checkout: "Proceed checkout"
+    form:
+      remove: "Remove"
+      quantity: "Quantity"
   carts:
     index:
       cart: "Cart"
@@ -171,6 +174,19 @@ en:
       available_add: "Select available address"
       other_add: "Delivery to other address?"
       add_new: "Add new address"
+    index:
+      product: "Product"
+      price: "Price"
+      quantity: "Quantity"
+      subtotal: "Subtotal"
+      checkout: "COMPLETE CHECKOUT"
+      address: "Shipping address"
+      phone: "Phone"
+      order: "Order"
+      edit: "Edit"
+      product: "product"
+      subtotal: "Subtotal"
+      grand_total: "Grand total"
   addresses:
     modal_new:
       new_add: "Add New Address"

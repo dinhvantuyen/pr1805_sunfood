@@ -1,5 +1,9 @@
 module SessionsHelper
 
+  def number_to_currency_br(number)
+    number_to_currency(number, :unit => "đ ", :delimiter => ".", precision: 0, format: "%n %u")
+  end
+
   def check_login
     return if user_signed_in?
     flash[:info] = "Login First!"

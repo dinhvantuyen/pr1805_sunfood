@@ -1,75 +1,67 @@
-    <main id="main" class="main-content">
-      <div class="payment clearfix">
-        <div class="flex-row container">
-          <div class="col-md-9 float-left">
-            <div class="contain-table">
-              <table class="table table-bordered" id="checkout-list">
-                <thead>
-                  <tr>
-                    <th scope="col">Product Name</th>
-                    <th scope="col">Unit Price</th>
-                    <th scope="col">Quanitty</th>
-                    <th scope="col">Subtotal</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Mark</td>
-                    <td>Mark</td>
-                    <td>1</td>
-                    <td>@mdo</td>
-                  </tr>
-                </tbody>
-              </table>
+<main id="main" class="main-content">
+  <div class="payment clearfix">
+    <div class="flex-row container">
+      <div class="col-md-9 float-left">
+        <div class="Information-line-product bg-white pd-20">
+          <div class="information">
+            <table>
+              <tr>
+                <th><%= t(".product") %></th>
+                <th><%= t(".price") %></th>
+                <th><%= t(".quantity") %></th>
+                <th><%= t(".subtotal") %></th>
+              </tr>
+              <%= render partial: "checkout_item", collection: current_order.product_orders, as: :product_order %>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <%= link_to checkout_path(current_order), method: :patch do %>
+            <%= button_tag t(".checkout"), class: "btn btn-block btn-default btn-checkout", id: "btn-ordered" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-3 float-left">
+        <div class="payments-address">
+          <div class="payments-sidebar-content">
+            <div class="payments-sidebar-title">
+              <span class="title">
+                <%= t(".address") %>
+              </span>
+              <a href="#" class="btn btn-default"><%= t(".edit") %></a>
             </div>
-            <div class="col-lg-6">
-              <button type="button" id="btn-ordered" class="btn btn-block btn-default btn-checkout">ĐẶT MUA</button>
-              <p class="note-payments">(Xin vui lòng kiểm tra lại đơn hàng trước khi Đặt Mua)</p>
+            <div class="information">
+              <h6><%= @address.user.name %></h6>
+              <p class="end"><%= @address.address %><br><%= @address.country %><br><%= t(".phone") %>: <%= @address.phone %></p>
             </div>
           </div>
-          <div class="col-md-3 float-left">
-            <div class="payments-address">
-              <div class="payments-sidebar-content">
-                <div class="payments-sidebar-title">
-                  <span class="title">
-                    Địa chỉ giao hàng
-                  </span>
-                  <a href="#" class="btn btn-default">Sửa</a>
-                </div>
-                <div class="information">
-                  <h6><%= @address.user.name %></h6>
-                  <p class="end"><%= @address.address %><br><%= @address.country %><br>Điện thoại: <%= @address.phone %></p>
-                </div>
-              </div>
+        </div>
+        <div class="sidebar-payments-info">
+          <div class="payments-sidebar-content">
+            <div class="payments-sidebar-title">
+              <span class="title">
+                <%= t(".phone") %>
+              </span>
+              <a href="#" class="btn btn-default"><%= t(".edit") %></a>
             </div>
-            <div class="sidebar-payments-info">
-              <div class="payments-sidebar-content">
-                <div class="payments-sidebar-title">
-                  <span class="title">
-                    Đơn hàng
-                  </span>
-                  <a href="#" class="btn btn-default">Sửa</a>
-                </div>
-                <div class="information">
-                  <p class="left">Số lượng</p>
-                  <p class="float-right"><%= current_order.total_quantity %> sản phẩm</p>
-                </div>
-                <div class="information">
-                  <p class="left">Tạm tính:</p>
-                  <p class="float-right">63.000đ</p>
-                  <br>
-                  <p>Phí vận chuyển:</p>
-                  <p class="float-right">12.000đ</p>
-                </div>
-                <div class="information">
-                  <p class="left"><strong>Thành tiền:</strong></p>
-                  <p class="float-right">
-                    <strong style="color: #ee2347; font-size: 16px;">75.000đ</strong>
-                  </p>
-                </div>
-              </div>
+            <div class="information">
+              <p class="left"><%= t(".quantity") %></p>
+              <p class="float-right"><%= current_order.total_quantity %> <%= t(".product") %></p>
+            </div>
+            <div class="information">
+              <p class="left"><%= t(".subtotal") %>:</p>
+              <p class="float-right"><%= number_to_currency_br(current_order.subtotal) %></p>
+              <br>
+            </div>
+            <div class="information">
+              <p class="left"><strong><%= t(".grand_total") %>:</strong></p>
+              <p class="float-right">
+                <strong style="color: #ee2347; font-size: 16px;"><%= number_to_currency_br(current_order.subtotal) %></strong>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </div>
+</main>

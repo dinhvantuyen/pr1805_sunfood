@@ -3085,6 +3085,9 @@ Css info line product
 .Information-line-title h5{
   font-weight: 600;
 }
+.Information-line-product{
+  margin-top: 62px;
+}
 .Information-line-product img{
   max-height: 60px;
   max-width: 60px;
@@ -3101,6 +3104,14 @@ Css info line product
 .Information-line-product .product-info a{
   color: #007bff;
   font-size: 13px;
+}
+.Information-line-product .product-info h5{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  width: 350px;
+  -webkit-box-orient: vertical;
 }
 .product-info .btn {
   margin-right: 10px;
@@ -3403,6 +3414,10 @@ Css info line product
 }
 .Information-line-title h5{
   font-weight: 600;
+}
+.Information-line-product{
+  margin-top: 62px;
+  margin-bottom: 30px;
 }
 .Information-line-product img{
   max-height: 60px;
@@ -3812,4 +3827,25 @@ Css shop
 
 .pull-right li {
   display: inline-block;
+}
+.table.table-bordered th{
+  border-bottom: none !important;
+  border-bottom-width: 0 !important;
+  border: none;
+}
+.table-bordered td, .table-bordered th{
+  border: none;
+  border-top: 1px solid #dee2e6;
+}
+.img-checkout{
+  max-height: 60px;
+  max-width: 80px;
+}
+.product-info a.btn.delete {
+  padding: 5px 10px;
+  width: 60px;
+}
+.scroll-cart {
+  height: 500px;
+  overflow: auto;
 }

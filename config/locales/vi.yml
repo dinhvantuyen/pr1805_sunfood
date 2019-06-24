@@ -160,6 +160,9 @@ vi:
       grand_total: "Thành tiền"
       vat_added: "Đã bao gồm VAT"
       checkout: "Tiến hành đặt hàng"
+    form:
+      remove: "Gỡ bỏ"
+      quantity: "Số lượng"
   carts:
     index:
       cart: "Giỏ hàng"
@@ -215,6 +218,19 @@ vi:
       available_add: "Chọn địa chỉ giao hàng có sẵn bên dưới"
       other_add: "Bạn muốn giao hàng đến địa chỉ khác?"
       add_new: "Thêm địa chỉ giao hàng mới"
+    index:
+      product: "Sản phẩm"
+      price: "Gía"
+      quantity: "Số lượng"
+      subtotal: "Thành tiền"
+      checkout: "Đặt Mua"
+      address: "Địa chỉ giao hàng"
+      phone: "Điện thoại"
+      order: "Đơn hàng"
+      edit: "Sửa"
+      product: "sản phẩm"
+      subtotal: "tạm tính"
+      grand_total: "Thành tiền"
   addresses:
     modal_new:
       new_add: "Thêm Địa Chỉ Mới"

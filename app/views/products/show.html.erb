@@ -72,19 +72,19 @@
                   <p>
                     <span><%= t(".price") %> :</span>
                     <span class="flat-price">
-                      <%= @product.sale_price %> ₫
+                      <%= number_to_currency_br(@product.sale_price) %>
                     </span>
                   </p>
                   <p>
                     <span class="price-label"><%= t(".save") %>:</span>
                     <span id="span-discount-percent" class="discount-percent">38%</span>
                     <span id="span-saving-price">
-                      (650.000&nbsp;₫)
+                      (65.000&nbsp;₫)
                     </span>
                   </p>
                   <p class="old-price-item" data-value="1700000" id="p-listpirce">
                     <span class="price-label"><%= t(".market_price") %>:</span>
-                    <span id="span-list-price"><%= @product.price %>&nbsp;₫</span>
+                    <span id="span-list-price"><%= number_to_currency_br(@product.price) %></span>
                   </p>
                 </div>
                 <div class="des-produtc-info clearfix">
